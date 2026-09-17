@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-hack-pink: #FF007F;
+  --color-hack-blue: #00E5FF;
+  --color-hack-gold: #FFD700;
+  --color-hack-bg: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-hack-bg text-white font-inter selection:bg-hack-pink/30;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-rajdhani uppercase tracking-wider;
+  }
+}
+
+@layer utilities {
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.5), 0 0 20px rgba(255, 0, 127, 0.3);
+  }
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 229, 255, 0.3);
+  }
+  .border-glow-pink {
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+  }
+  .border-glow-blue {
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+  }
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.45), 0 0 20px rgba(255, 215, 0, 0.2);
+  }
+  .text-glow-soft {
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.22);
+  }
+  .circuit-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-hack-bg;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-hack-pink/50 transition-colors;
+}
+
