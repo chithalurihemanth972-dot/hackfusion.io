@@ -26,7 +26,7 @@ const Logo = ({ className = 'h-10 w-auto' }: LogoProps) => {
       <div
         className={`${className} inline-flex items-center justify-center border border-hack-gold/60 px-3 text-hack-gold font-rajdhani text-xs tracking-[0.15em]`}
       >
-        KPROJECTXX
+        KprojectXx
       </div>
     );
   }
