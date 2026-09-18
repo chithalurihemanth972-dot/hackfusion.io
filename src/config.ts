@@ -5,7 +5,7 @@ export const HACKATHON_DETAILS = {
   name: "HACKFUSION",
   edition: "2026",
   tagline: "WHERE CODE AND CIRCUITS CREATE SOLUTIONS",
-  organizer: "KprojectXx",
+  organizer: "Kprojectxx",
   mark: "PRIORIX MARK",
   date: "27 SEPTEMBER",
   registrationDeadline: "25 SEPTEMBER",
