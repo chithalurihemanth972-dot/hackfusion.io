@@ -45,6 +45,16 @@ const base = import.meta.env.BASE_URL || "/";
 
 export const PROBLEM_STATEMENTS = [
   {
+    tag: "Software Track",
+    title: "Software Problem Statements",
+    description:
+      "Web & mobile apps, AI/ML solutions, automation systems and open innovation challenges. Download the official PDF and choose your problem.",
+    file: `${base}problem-statements/hackfusion-software-problem-statements.pdf`,
+    accentBorder: "border-hack-blue",
+    accentGlow: "group-hover:shadow-[0_0_30px_rgba(0,229,255,0.25)]",
+    accentText: "text-hack-blue",
+  },
+  {
     tag: "Hardware Track",
     title: "Hardware Problem Statements",
     description:
@@ -60,8 +70,8 @@ export const PROBLEM_STATEMENTS = [
     description:
       "Updated version of the hardware problem set. Download this if you want the latest copy shared by organizers.",
     file: `${base}problem-statements/hackfusion-hardware-problem-statements-v2.pdf`,
-    accentBorder: "border-hack-blue",
-    accentGlow: "group-hover:shadow-[0_0_30px_rgba(0,229,255,0.25)]",
-    accentText: "text-hack-blue",
+    accentBorder: "border-hack-gold",
+    accentGlow: "group-hover:shadow-[0_0_30px_rgba(255,215,0,0.22)]",
+    accentText: "text-hack-gold",
   },
 ];
