@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Link2, Timer } from 'lucide-react';
 import { HACKATHON_DETAILS } from '../config';
 
-const rounds: { title: string; subtitle: string; status: string; link?: string; closed?: boolean }[] = [
+const rounds: { title: string; subtitle: string; status: string; link?: string; closed?: boolean; deadline?: string }[] = [
   {
     title: 'ROUND 0',
     subtitle: 'FINALISE YOUR PROBLEM STATEMENT',
@@ -12,7 +12,9 @@ const rounds: { title: string; subtitle: string; status: string; link?: string; 
   {
     title: 'ROUND 1',
     subtitle: 'IDEATION & PROBLEM STATEMENT',
-    status: 'Submission link to be declared on this page.',
+    status: 'Live — submit your work before the deadline.',
+    link: 'https://forms.gle/yesLvDtGKxZecZE66',
+    deadline: '12 PM',
   },
   {
     title: 'ROUND 2',
@@ -80,6 +82,12 @@ const Rounds = () => {
                       <span className="h-2 w-2 rounded-full bg-hack-gold animate-pulse" />
                       {round.status}
                     </p>
+                    {round.deadline && (
+                      <p className="text-hack-gold text-sm font-bold uppercase tracking-[0.18em] mt-2 flex items-center gap-2">
+                        <Timer className="w-4 h-4" />
+                        Deadline: {round.deadline}
+                      </p>
+                    )}
                   </div>
                   <a
                     href={round.link}
