@@ -2,15 +2,12 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Link2, Timer } from 'lucide-react';
 import { HACKATHON_DETAILS } from '../config';
 
-const ROUND_0_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSc6EXN2dztTsK4fq-eqFUWjd_Uqib2VxebQoycY76jYwUU9MA/viewform?usp=header';
-
-const rounds: { title: string; subtitle: string; status: string; link?: string }[] = [
+const rounds: { title: string; subtitle: string; status: string; link?: string; closed?: boolean }[] = [
   {
     title: 'ROUND 0',
     subtitle: 'FINALISE YOUR PROBLEM STATEMENT',
-    status: 'Live — submit your finalized problem statement now.',
-    link: ROUND_0_FORM_URL,
+    status: 'Google Form Closed.',
+    closed: true,
   },
   {
     title: 'ROUND 1',
@@ -103,7 +100,7 @@ const Rounds = () => {
                       {round.status}
                     </p>
                   </div>
-                  <p className="text-white/40 text-xs uppercase tracking-[0.16em]">Link field: To be declared</p>
+                  <p className="text-white/40 text-xs uppercase tracking-[0.16em]">{round.closed ? 'Submissions closed' : 'Link field: To be declared'}</p>
                 </>
               )}
             </motion.article>
