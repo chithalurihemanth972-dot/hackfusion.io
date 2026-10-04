@@ -12,9 +12,8 @@ const rounds: { title: string; subtitle: string; status: string; link?: string; 
   {
     title: 'ROUND 1',
     subtitle: 'IDEATION & PROBLEM STATEMENT',
-    status: 'Live — submit your work before the deadline.',
-    link: 'https://forms.gle/yesLvDtGKxZecZE66',
-    deadline: '12:15 PM',
+    status: 'Google Form Closed.',
+    closed: true,
   },
   {
     title: 'ROUND 2',
