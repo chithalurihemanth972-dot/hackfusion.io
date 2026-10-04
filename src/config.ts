@@ -64,14 +64,4 @@ export const PROBLEM_STATEMENTS = [
     accentGlow: "group-hover:shadow-[0_0_30px_rgba(255,0,127,0.24)]",
     accentText: "text-hack-pink",
   },
-  {
-    tag: "Hardware Track • V2",
-    title: "Hardware Problem Statements (V2)",
-    description:
-      "Updated version of the hardware problem set. Download this if you want the latest copy shared by organizers.",
-    file: `${base}problem-statements/hackfusion-hardware-problem-statements-v2.pdf`,
-    accentBorder: "border-hack-gold",
-    accentGlow: "group-hover:shadow-[0_0_30px_rgba(255,215,0,0.22)]",
-    accentText: "text-hack-gold",
-  },
 ];
