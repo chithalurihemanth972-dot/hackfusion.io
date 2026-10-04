@@ -18,9 +18,8 @@ const rounds: { title: string; subtitle: string; status: string; link?: string; 
   {
     title: 'ROUND 2',
     subtitle: 'BUILD & PROTOTYPE',
-    status: 'Live — submit your work before the deadline.',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLScFNpDoAWzLyXA2-dPXjbDdtUWNPzJ5h-p91bnM1svD6QKOlg/viewform?usp=publish-editor',
-    deadline: '3:30 PM',
+    status: 'Google Form Closed.',
+    closed: true,
   },
   {
     title: 'ROUND 3',
