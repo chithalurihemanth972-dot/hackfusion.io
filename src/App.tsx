@@ -10,7 +10,6 @@ import ProblemStatements from './components/ProblemStatements';
 import Rounds from './components/Rounds';
 import RoundsTeaser from './components/RoundsTeaser';
 import EventDetails from './components/EventDetails';
-import RegistrationCTA from './components/RegistrationCTA';
 import Footer from './components/Footer';
 
 const HomePage = () => {
@@ -23,7 +22,6 @@ const HomePage = () => {
       <ProblemStatements />
       <RoundsTeaser />
       <EventDetails />
-      <RegistrationCTA />
     </main>
   );
 };

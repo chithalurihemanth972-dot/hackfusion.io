@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { HACKATHON_DETAILS } from '../config';
 import Logo from './Logo';
@@ -88,19 +87,6 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <a
-              href={HACKATHON_DETAILS.registrationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 bg-hack-pink text-white font-rajdhani text-xl font-bold px-12 py-4 rounded-sm transition-all hover:scale-105 hover:bg-hack-pink/90 shadow-[0_0_24px_rgba(255,0,127,0.55)]"
-            >
-              REGISTER NOW
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-
-              {/* Corner accents */}
-              <div className="absolute -top-1 -left-1 w-3 h-3 border-l-2 border-t-2 border-white" />
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-r-2 border-b-2 border-white" />
-            </a>
             <Link
               to="/rounds"
               className="inline-flex items-center gap-2 border border-hack-blue/65 px-8 py-4 font-rajdhani text-lg font-bold uppercase tracking-wider text-hack-blue text-glow-blue hover:bg-hack-blue/8 transition-colors"

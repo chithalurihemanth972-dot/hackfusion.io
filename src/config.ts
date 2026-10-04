@@ -1,6 +1,3 @@
-export const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdYhPd1SRI4deS0HqcvWSTd9H-Q9r4ksQ0gQ0GPCuGoJpOnyQ/viewform?usp=publish-editor";
-
 export const HACKATHON_DETAILS = {
   name: "HACKFUSION",
   edition: "2026",
@@ -15,7 +12,6 @@ export const HACKATHON_DETAILS = {
   prizePool: "₹10,000",
   registrationFee: "₹150",
   theme: "OPEN INNOVATION",
-  registrationUrl: REGISTRATION_URL,
   softwareDomainSummary:
     "Build innovative digital solutions, applications, platforms, automation systems, AI/ML solutions, and more.",
   softwareDomains: [

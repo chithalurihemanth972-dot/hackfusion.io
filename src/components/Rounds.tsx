@@ -1,8 +1,17 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Link2, Timer } from 'lucide-react';
+import { ExternalLink, Link2, Timer } from 'lucide-react';
 import { HACKATHON_DETAILS } from '../config';
 
-const rounds = [
+const ROUND_0_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSc6EXN2dztTsK4fq-eqFUWjd_Uqib2VxebQoycY76jYwUU9MA/viewform?usp=header';
+
+const rounds: { title: string; subtitle: string; status: string; link?: string }[] = [
+  {
+    title: 'ROUND 0',
+    subtitle: 'FINALISE YOUR PROBLEM STATEMENT',
+    status: 'Live — submit your finalized problem statement now.',
+    link: ROUND_0_FORM_URL,
+  },
   {
     title: 'ROUND 1',
     subtitle: 'IDEATION & PROBLEM STATEMENT',
@@ -45,7 +54,7 @@ const Rounds = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {rounds.map((round, index) => (
             <motion.article
               key={round.title}
@@ -53,7 +62,11 @@ const Rounds = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              className="relative border border-white/10 bg-black/50 p-7 transition-all duration-300 hover:border-hack-blue/60 hover:shadow-[0_0_28px_rgba(0,229,255,0.16)]"
+              className={`relative border bg-black/50 p-7 transition-all duration-300 ${
+                round.link
+                  ? 'border-hack-gold/60 shadow-[0_0_28px_rgba(255,215,0,0.16)] hover:shadow-[0_0_36px_rgba(255,215,0,0.28)]'
+                  : 'border-white/10 hover:border-hack-blue/60 hover:shadow-[0_0_28px_rgba(0,229,255,0.16)]'
+              }`}
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-white text-glow-soft">{round.title}</h3>
@@ -62,14 +75,37 @@ const Rounds = () => {
               <p className="text-hack-blue font-rajdhani text-base tracking-wide mb-5">
                 {round.subtitle}
               </p>
-              <div className="border border-hack-pink/35 px-4 py-3 mb-4 bg-hack-pink/5">
-                <p className="text-hack-pink text-xs uppercase tracking-[0.18em] mb-1">Submission Status</p>
-                <p className="text-white/75 text-sm flex items-center gap-2">
-                  <Link2 className="w-4 h-4 text-hack-pink" />
-                  {round.status}
-                </p>
-              </div>
-              <p className="text-white/40 text-xs uppercase tracking-[0.16em]">Link field: To be declared</p>
+              {round.link ? (
+                <>
+                  <div className="border border-hack-gold/40 px-4 py-3 mb-4 bg-hack-gold/5">
+                    <p className="text-hack-gold text-xs uppercase tracking-[0.18em] mb-1">Submission Status</p>
+                    <p className="text-white/80 text-sm flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-hack-gold animate-pulse" />
+                      {round.status}
+                    </p>
+                  </div>
+                  <a
+                    href={round.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 bg-hack-gold text-black px-5 py-3 font-rajdhani text-base font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:bg-hack-gold/85 transition-colors"
+                  >
+                    Submit Now
+                    <ExternalLink size={16} />
+                  </a>
+                </>
+              ) : (
+                <>
+                  <div className="border border-hack-pink/35 px-4 py-3 mb-4 bg-hack-pink/5">
+                    <p className="text-hack-pink text-xs uppercase tracking-[0.18em] mb-1">Submission Status</p>
+                    <p className="text-white/75 text-sm flex items-center gap-2">
+                      <Link2 className="w-4 h-4 text-hack-pink" />
+                      {round.status}
+                    </p>
+                  </div>
+                  <p className="text-white/40 text-xs uppercase tracking-[0.16em]">Link field: To be declared</p>
+                </>
+              )}
             </motion.article>
           ))}
         </div>
@@ -81,23 +117,14 @@ const Rounds = () => {
           className="mt-16 border border-hack-blue/35 bg-hack-blue/5 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div>
-            <p className="text-hack-blue text-xs uppercase tracking-[0.2em] mb-2">Registration Open</p>
+            <p className="text-hack-blue text-xs uppercase tracking-[0.2em] mb-2">HackFusion 2026</p>
             <h2 className="text-2xl md:text-3xl font-bold text-white text-glow-soft">
               Build. Innovate. Solve.
             </h2>
             <p className="text-white/65 text-sm md:text-base mt-2">
-              {HACKATHON_DETAILS.name} {HACKATHON_DETAILS.edition} is live. Register now and secure your spot.
+              {HACKATHON_DETAILS.name} {HACKATHON_DETAILS.edition} is live. Explore the rounds and problem statements below.
             </p>
           </div>
-          <a
-            href={HACKATHON_DETAILS.registrationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-hack-pink text-white px-6 py-3 font-rajdhani text-lg font-bold uppercase tracking-wider shadow-[0_0_22px_rgba(255,0,127,0.45)] hover:bg-hack-pink/85 transition-colors"
-          >
-            Register Now
-            <ArrowRight size={18} />
-          </a>
         </motion.div>
       </div>
     </section>

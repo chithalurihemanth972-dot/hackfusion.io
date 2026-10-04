@@ -62,14 +62,6 @@ const Navbar = () => {
           >
             Rounds
           </Link>
-          <a
-            href={HACKATHON_DETAILS.registrationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-hack-pink hover:bg-hack-pink/80 text-white px-6 py-2 rounded-sm border border-hack-pink shadow-[0_0_18px_rgba(255,0,127,0.5)] font-rajdhani text-sm font-semibold uppercase tracking-widest"
-          >
-            Register
-          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -108,15 +100,6 @@ const Navbar = () => {
               >
                 Rounds
               </Link>
-              <a
-                href={HACKATHON_DETAILS.registrationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-rajdhani text-lg font-semibold uppercase tracking-widest text-hack-pink text-glow-pink"
-              >
-                Register
-              </a>
             </div>
           </motion.div>
         )}
