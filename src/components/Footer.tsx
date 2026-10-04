@@ -19,16 +19,9 @@ const Footer = () => {
           
           <div className="h-px w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
           
-          <p className="text-hack-gold font-rajdhani text-lg md:text-xl font-bold tracking-widest mb-4 text-glow-gold">
+          <p className="text-hack-gold font-rajdhani text-lg md:text-xl font-bold tracking-widest mb-6 text-glow-gold">
             {HACKATHON_DETAILS.organizer} PRESENTS
           </p>
-
-          <div className="border border-hack-blue/35 bg-hack-blue/5 px-6 py-3 mb-6 shadow-[0_0_20px_rgba(0,229,255,0.15)]">
-            <p className="text-hack-blue text-xs uppercase tracking-[0.3em] font-bold">Official Mark</p>
-            <p className="text-white text-lg md:text-xl font-rajdhani font-bold tracking-[0.12em]">
-              {HACKATHON_DETAILS.mark}
-            </p>
-          </div>
           
           <p className="text-white/30 text-xs font-semibold tracking-[0.16em] uppercase">
             © {new Date().getFullYear()} {HACKATHON_DETAILS.name}. ALL RIGHTS RESERVED.

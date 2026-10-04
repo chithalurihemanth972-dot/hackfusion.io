@@ -3,7 +3,6 @@ export const HACKATHON_DETAILS = {
   edition: "2026",
   tagline: "WHERE CODE AND CIRCUITS CREATE SOLUTIONS",
   organizer: "Kprojectxx",
-  mark: "PRIORIX MARK",
   date: "4 OCTOBER",
   registrationDeadline: "3 OCTOBER",
   duration: "12 HOURS",

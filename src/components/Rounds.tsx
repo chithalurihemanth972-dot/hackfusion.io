@@ -14,7 +14,7 @@ const rounds: { title: string; subtitle: string; status: string; link?: string; 
     subtitle: 'IDEATION & PROBLEM STATEMENT',
     status: 'Live — submit your work before the deadline.',
     link: 'https://forms.gle/yesLvDtGKxZecZE66',
-    deadline: '12 PM',
+    deadline: '12:15 PM',
   },
   {
     title: 'ROUND 2',
