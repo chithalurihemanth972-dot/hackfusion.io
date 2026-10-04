@@ -40,3 +40,28 @@ export const COLORS = {
   gold: "#FFD700",
   bg: "#050505",
 };
+
+const base = import.meta.env.BASE_URL || "/";
+
+export const PROBLEM_STATEMENTS = [
+  {
+    tag: "Hardware Track",
+    title: "Hardware Problem Statements",
+    description:
+      "Embedded systems, robotics, IoT, drones, EV & AgriTech challenges. Download the official PDF and choose your problem.",
+    file: `${base}problem-statements/hackfusion-hardware-problem-statements.pdf`,
+    accentBorder: "border-hack-pink",
+    accentGlow: "group-hover:shadow-[0_0_30px_rgba(255,0,127,0.24)]",
+    accentText: "text-hack-pink",
+  },
+  {
+    tag: "Hardware Track • V2",
+    title: "Hardware Problem Statements (V2)",
+    description:
+      "Updated version of the hardware problem set. Download this if you want the latest copy shared by organizers.",
+    file: `${base}problem-statements/hackfusion-hardware-problem-statements-v2.pdf`,
+    accentBorder: "border-hack-blue",
+    accentGlow: "group-hover:shadow-[0_0_30px_rgba(0,229,255,0.25)]",
+    accentText: "text-hack-blue",
+  },
+];

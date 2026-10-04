@@ -6,6 +6,7 @@ import Background from './components/Background';
 import EventStats from './components/EventStats';
 import About from './components/About';
 import Domains from './components/Domains';
+import ProblemStatements from './components/ProblemStatements';
 import Rounds from './components/Rounds';
 import RoundsTeaser from './components/RoundsTeaser';
 import EventDetails from './components/EventDetails';
@@ -19,6 +20,7 @@ const HomePage = () => {
       <EventStats />
       <About />
       <Domains />
+      <ProblemStatements />
       <RoundsTeaser />
       <EventDetails />
       <RegistrationCTA />
@@ -30,6 +32,7 @@ const RoundsPage = () => {
   return (
     <main>
       <Rounds />
+      <ProblemStatements />
     </main>
   );
 };
