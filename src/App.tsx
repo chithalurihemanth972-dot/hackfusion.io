@@ -9,6 +9,8 @@ import Domains from './components/Domains';
 import ProblemStatements from './components/ProblemStatements';
 import Rounds from './components/Rounds';
 import RoundsTeaser from './components/RoundsTeaser';
+import Winners from './components/Winners';
+import WinnersTeaser from './components/WinnersTeaser';
 import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
 
@@ -16,6 +18,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
+      <WinnersTeaser />
       <EventStats />
       <About />
       <Domains />
@@ -55,6 +58,7 @@ const AppShell = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/rounds" element={<RoundsPage />} />
+        <Route path="/winners" element={<Winners />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 

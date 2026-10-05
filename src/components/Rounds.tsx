@@ -24,8 +24,8 @@ const rounds: { title: string; subtitle: string; status: string; link?: string; 
   {
     title: 'ROUND 3',
     subtitle: 'FINAL DEMO & PRESENTATION',
-    status: 'Live — submit your work now.',
-    link: 'https://forms.gle/Xcq8gdhpYtG6br9c7',
+    status: 'Google Form Closed.',
+    closed: true,
   },
 ];
 

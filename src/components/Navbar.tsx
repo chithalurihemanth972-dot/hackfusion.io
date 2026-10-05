@@ -62,6 +62,16 @@ const Navbar = () => {
           >
             Rounds
           </Link>
+          <Link
+            to="/winners"
+            className={`font-rajdhani text-sm font-semibold uppercase tracking-widest transition-colors ${
+              location.pathname === '/winners'
+                ? 'text-hack-gold text-glow-gold'
+                : 'text-hack-gold/90 hover:text-hack-gold hover:[text-shadow:0_0_10px_rgba(255,215,0,0.6)]'
+            }`}
+          >
+            Winners
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -99,6 +109,13 @@ const Navbar = () => {
                 className="font-rajdhani text-lg font-semibold uppercase tracking-widest text-hack-gold"
               >
                 Rounds
+              </Link>
+              <Link
+                to="/winners"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="font-rajdhani text-lg font-semibold uppercase tracking-widest text-hack-gold"
+              >
+                Winners
               </Link>
             </div>
           </motion.div>
