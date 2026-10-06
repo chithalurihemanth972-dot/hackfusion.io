@@ -36,6 +36,9 @@ export const COLORS = {
   bg: "#050505",
 };
 
+export const CERTIFICATES_DRIVE_LINK =
+  "https://drive.google.com/drive/folders/1Ids5wGBgNyWiJezU5QzW-m6EiHIqZo6G";
+
 const base = import.meta.env.BASE_URL || "/";
 
 export const PROBLEM_STATEMENTS = [

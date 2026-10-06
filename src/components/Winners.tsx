@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Trophy, Medal, Crown, Award, Sparkles, Star } from 'lucide-react';
+import { Trophy, Medal, Crown, Award, Sparkles, Star, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { HACKATHON_DETAILS } from '../config';
+import { CERTIFICATES_DRIVE_LINK, HACKATHON_DETAILS } from '../config';
 
 const CONFETTI = Array.from({ length: 36 }).map((_, i) => ({
   left: `${(i * 29) % 100}%`,
@@ -343,12 +343,24 @@ const Winners = () => {
               Build. Innovate. Solve. — see you at the next edition of {HACKATHON_DETAILS.name}.
             </p>
           </div>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 border border-hack-blue/65 px-6 py-3 font-rajdhani text-lg font-bold uppercase tracking-wider text-hack-blue text-glow-blue hover:bg-hack-blue/10 transition-colors shrink-0"
-          >
-            Back to Home
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <a
+              href={CERTIFICATES_DRIVE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-hack-gold text-black px-6 py-3 font-rajdhani text-lg font-bold uppercase tracking-wider shadow-[0_0_22px_rgba(255,215,0,0.4)] hover:bg-hack-gold/85 transition-colors"
+            >
+              <Award size={18} />
+              Get Certificates
+              <ExternalLink size={16} />
+            </a>
+            <Link
+              to="/"
+              className="inline-flex items-center justify-center gap-2 border border-hack-blue/65 px-6 py-3 font-rajdhani text-lg font-bold uppercase tracking-wider text-hack-blue text-glow-blue hover:bg-hack-blue/10 transition-colors"
+            >
+              Back to Home
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

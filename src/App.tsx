@@ -11,6 +11,7 @@ import Rounds from './components/Rounds';
 import RoundsTeaser from './components/RoundsTeaser';
 import Winners from './components/Winners';
 import WinnersTeaser from './components/WinnersTeaser';
+import Certificates from './components/Certificates';
 import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ const HomePage = () => {
     <main>
       <Hero />
       <WinnersTeaser />
+      <Certificates />
       <EventStats />
       <About />
       <Domains />
